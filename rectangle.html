@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="Myreg" width="300" height="100" style="border: 1px solid"></canvas>
+<script>
+    let reg = document.getElementById("Myreg");
+    let ctx = reg.getContext("2d");
+    ctx.beginPath();
+    ctx.fillRect(100, 10, 50, 100);
+    ctx.fillStyle="#ffdd00"
+    class Rectangle {
+        constructor(length, weight) {
+            this.length = length;
+            this.weight = weight;
+        }
+        getLength() {
+            return this.length;
+        }
+        getWeight() {
+            return this.weight;
+        }
+        getPerimeter(){
+            return (this.length + this.weight) * 2;
+        }
+        getArea() {
+            return this.weight * this.length;
+        }
+    }
+    let rec = new Rectangle(100, 50);
+    let length = rec.getLength();
+    let weight = rec.getWeight();
+    let area = rec.getArea();
+    let peri = rec.getPerimeter();
+    alert("Hình chữ nhật có chiều dài: " + length + " và chiều rộng: " + weight + " có diện tích: " + area + " và chu vi: " + peri)
+</script>
+</body>
+</html>
